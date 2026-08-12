@@ -5,12 +5,12 @@ import { profile, skills, experience, projects } from "../lib/portfolio-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${profile.name} — Software Engineer & Web Developer` },
+      { title: `${profile.name} — Machine Learning & Software Developer` },
       {
         name: "description",
-        content: `${profile.name} is a software engineer building fast, reliable web products with React, TypeScript and Node.js. See projects, experience and contact details.`,
+        content: `${profile.name} is a CSE undergraduate building AI and machine learning projects with Python. See projects, skills and contact details.`,
       },
-      { property: "og:title", content: `${profile.name} — Software Engineer` },
+      { property: "og:title", content: `${profile.name} — ML & Software Developer` },
       { property: "og:description", content: profile.tagline },
     ],
   }),
@@ -85,7 +85,7 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-5xl px-5 pb-16">
-        <p className="mono-label">Experience</p>
+        <p className="mono-label">Achievements</p>
         <h2 className="mt-3 text-3xl font-semibold">Where I've worked</h2>
         <div className="mt-6 space-y-4">
           {experience.map((job) => (

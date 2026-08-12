@@ -8,7 +8,7 @@ export const Route = createFileRoute("/projects")({
       { title: `Projects — ${profile.name}` },
       {
         name: "description",
-        content: `Selected software projects built by ${profile.name}, spanning full-stack web apps, internal tooling and interface-heavy products.`,
+        content: `Selected software projects built by ${profile.name}, spanning machine learning, NLP and data analysis.`,
       },
       { property: "og:title", content: `Projects by ${profile.name}` },
       {
