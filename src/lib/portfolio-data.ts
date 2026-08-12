@@ -95,3 +95,18 @@ export const projects = [
     repo: "https://github.com/rachittsethii",
   },
 ];
+
+export const certificates = [
+  {
+    name: "Copado Certified Copado AI",
+    issuer: "Copado",
+    date: "Jul 2026",
+    link: "#",
+  },
+  {
+    name: "Web Development Training with AI",
+    issuer: "Internshala",
+    date: "Aug 2024",
+    link: "#",
+  },
+];
