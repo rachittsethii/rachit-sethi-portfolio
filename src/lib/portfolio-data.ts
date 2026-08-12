@@ -101,12 +101,14 @@ export const certificates = [
     name: "Copado Certified Copado AI",
     issuer: "Copado",
     date: "Jul 2026",
+    // Replace with the actual credential URL from Copado/Credly.
     link: "#",
   },
   {
     name: "Web Development Training with AI",
     issuer: "Internshala",
     date: "Aug 2024",
+    // Replace with the actual certificate verification URL from Internshala.
     link: "#",
   },
 ];
