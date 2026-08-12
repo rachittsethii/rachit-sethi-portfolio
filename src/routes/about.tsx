@@ -4,10 +4,10 @@ import { profile, skills, experience, education } from "../lib/portfolio-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: `About ${profile.name} — Software Engineer` },
+      { title: `About ${profile.name} — ML & Software Developer` },
       {
         name: "description",
-        content: `Background, skills and work experience of ${profile.name}, a software engineer building web products with React, TypeScript and Node.js.`,
+        content: `Background, skills and work experience of ${profile.name}, a CSE undergraduate building machine learning and web projects with Python, Scikit-learn and JavaScript.`,
       },
       { property: "og:title", content: `About ${profile.name}` },
       {
@@ -52,7 +52,7 @@ function AboutPage() {
       </section>
 
       <section className="mt-16">
-        <h2 className="text-2xl font-semibold">Experience</h2>
+        <h2 className="text-2xl font-semibold">Achievements & Activities</h2>
         <div className="mt-6 space-y-4">
           {experience.map((job) => (
             <div key={job.role + job.company} className="panel p-6">
