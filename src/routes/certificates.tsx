@@ -31,24 +31,25 @@ function CertificatesPage() {
 
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {certificates.map((cert) => (
-          <article key={cert.name} className="panel p-6">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <Award className="size-6 text-primary" />
-                <div>
-                  <h2 className="text-lg font-semibold">{cert.name}</h2>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                </div>
+          <article key={cert.name} className="panel flex flex-col p-6">
+            <div className="flex items-start gap-3">
+              <Award className="size-6 shrink-0 text-primary" />
+              <div>
+                <h2 className="text-lg font-semibold">{cert.name}</h2>
+                <p className="text-sm text-muted-foreground">{cert.issuer}</p>
               </div>
+            </div>
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-border/60 pt-4">
+              <p className="font-mono text-xs text-primary">{cert.date}</p>
               <a
                 href={cert.link}
-                aria-label={`Verify ${cert.name}`}
-                className="text-muted-foreground transition-colors hover:text-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
               >
-                <ExternalLink className="size-4" />
+                Verify credential <ExternalLink className="size-3.5" />
               </a>
             </div>
-            <p className="mt-4 font-mono text-xs text-primary">{cert.date}</p>
           </article>
         ))}
       </div>
