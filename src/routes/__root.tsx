@@ -11,6 +11,63 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { profile } from "../lib/portfolio-data";
+
+const navItems = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
+] as const;
+
+function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
+        <Link to="/" className="font-mono text-sm font-semibold tracking-tight text-foreground">
+          <span className="text-primary">~/</span>
+          {profile.name.toLowerCase().replace(" ", "-")}
+        </Link>
+        <nav className="flex items-center gap-1 text-sm">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              activeOptions={{ exact: item.to === "/" }}
+              className="rounded-md px-3 py-1.5 text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ className: "text-foreground bg-secondary" }}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="border-t border-border/70">
+      <div className="mx-auto flex max-w-5xl flex-col gap-2 px-5 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-mono text-xs">
+          © {new Date().getFullYear()} {profile.name}
+        </p>
+        <div className="flex gap-4">
+          <a className="transition-colors hover:text-primary" href={profile.github}>
+            GitHub
+          </a>
+          <a className="transition-colors hover:text-primary" href={profile.linkedin}>
+            LinkedIn
+          </a>
+          <a className="transition-colors hover:text-primary" href={`mailto:${profile.email}`}>
+            Email
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
 function NotFoundComponent() {
   return (
@@ -91,6 +148,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
@@ -119,8 +182,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <SiteFooter />
+      </div>
     </QueryClientProvider>
   );
 }
