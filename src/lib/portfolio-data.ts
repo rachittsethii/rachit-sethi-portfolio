@@ -4,7 +4,7 @@ export const profile = {
   name: "Rachit Sethi",
   role: "Machine Learning & Software Developer",
   tagline:
-    "CSE undergrad building AI-driven tools with Python, machine learning and clean, practical interfaces.",
+    "Computer Science undergraduate proficient in Machine Learning, Python, C++ and Data Structures, building real-world, AI-driven software.",
   location: "Jaipur, India",
   email: "rachitsethi004@gmail.com",
   phone: "+91 95491 01235",
@@ -14,7 +14,7 @@ export const profile = {
   about: [
     "I'm a Computer Science undergraduate at JECRC Foundation, Jaipur, focused on machine learning, Python and core computer science fundamentals like data structures and OOP.",
     "I like turning ideas into working software — from NLP-based resume scoring to end-to-end regression pipelines — and I'm happiest when a project moves from a notebook to something people can actually use.",
-    "Outside code, I've captained football teams at school and college level and represented at state level in football and swimming, which is where most of my teamwork and leadership habits come from.",
+    "Outside code, I've captained football teams at school and college level, represented at state level in football and swimming, coordinated large college fest events as a core member and served on the Student Council.",
   ],
 };
 
@@ -80,6 +80,7 @@ export const education = [
 export const projects = [
   {
     name: "AI Resume Analyzer",
+    date: "Aug 2026",
     blurb:
       "NLP-based ATS scoring tool that matches resumes to job descriptions using the all-MiniLM-L6-v2 transformer and cosine similarity, with PDF parsing, skill extraction and matched/missing skill analysis. Deployed on Streamlit Cloud.",
     stack: ["Python", "Streamlit", "Sentence Transformers", "Scikit-learn", "NLP"],
@@ -88,6 +89,7 @@ export const projects = [
   },
   {
     name: "Housing Price Prediction",
+    date: "Mar 2026",
     blurb:
       "End-to-end machine learning app predicting housing prices, covering data cleaning, categorical encoding, feature scaling and exploratory analysis of correlations, outliers and price distributions.",
     stack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
@@ -130,7 +132,7 @@ export const certificates = [
   {
     name: "C++ Certificate",
     issuer: "LinkedIn",
-    date: "",
+    date: "Apr 2024",
     link: "https://drive.google.com/file/d/1ALs5rh6vnSCgv1rieoozzVdWjSsCpulA/view?usp=drive_link",
   },
 ];
