@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, MapPin } from "lucide-react";
 import { profile, skills, experience, projects } from "../lib/portfolio-data";
 
-export const Route = createFileRoute("/")({
+
   export const Route = createFileRoute("/")({
   head: () => ({
     links: [
