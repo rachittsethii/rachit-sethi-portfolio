@@ -107,7 +107,30 @@ export const certificates = [
     name: "Web Development Training with AI",
     issuer: "Internshala",
     date: "Aug 2024",
-    // Replace with the actual certificate verification URL from Internshala.
-    link: "#",
+    link: "https://drive.google.com/file/d/1OY6gyi4Ae6TeeWFBLABwg5tICGLF1DKu/view?usp=drive_link",
+  },
+  {
+    name: "REN 2025 Core Team",
+    issuer: "JECRC",
+    date: "2025",
+    link: "https://drive.google.com/file/d/1UIu2-n_n-34j0IUkUS8Vy0vjBGbJy5kD/view?usp=drive_link",
+  },
+  {
+    name: "Smart India Hackathon 2024",
+    issuer: "JECRC HackQuest 7.0",
+    date: "2024",
+    link: "https://drive.google.com/file/d/1yYrij2W0F6y4F23uMPTutY1PKSNFdoGh/view?usp=drive_link",
+  },
+  {
+    name: "2nd Position — RTU Inter-College Football Tournament",
+    issuer: "RTU",
+    date: "Nov 2023",
+    link: "https://drive.google.com/file/d/1lye71gXk1j8Ohw-OiRWbK6Gnh8qwvuj8/view?usp=drive_link",
+  },
+  {
+    name: "C++ Certificate",
+    issuer: "LinkedIn",
+    date: "",
+    link: "https://drive.google.com/file/d/1ALs5rh6vnSCgv1rieoozzVdWjSsCpulA/view?usp=drive_link",
   },
 ];
