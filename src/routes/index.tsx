@@ -3,7 +3,15 @@ import { ArrowRight, Download, MapPin } from "lucide-react";
 import { profile, skills, experience, projects } from "../lib/portfolio-data";
 
 export const Route = createFileRoute("/")({
+  export const Route = createFileRoute("/")({
   head: () => ({
+    links: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+    ],
     meta: [
       { title: `${profile.name} — Machine Learning & Software Developer` },
       {
@@ -16,7 +24,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
-
 function Index() {
   return (
     <div>
