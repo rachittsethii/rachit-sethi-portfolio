@@ -19,8 +19,8 @@ export const Route = createFileRoute("/contact")({
 
 const links = [
   { label: "Email", value: profile.email, href: `mailto:${profile.email}`, Icon: Mail },
-  { label: "GitHub", value: "View profile", href: profile.github, Icon: Github },
-  { label: "LinkedIn", value: "Connect", href: profile.linkedin, Icon: Linkedin },
+  { label: "GitHub", value: "github.com/rachittsethii", href: "https://github.com/rachittsethii", Icon: Github },
+  { label: "LinkedIn", value: "linkedin.com/in/rachit-sethi", href: "https://linkedin.com/in/rachit-sethi", Icon: Linkedin },
 ];
 
 function ContactPage() {
