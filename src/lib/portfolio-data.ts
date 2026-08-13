@@ -9,7 +9,7 @@ export const profile = {
   email: "rachitsethi004@gmail.com",
   phone: "+91 95491 01235",
   github: "https://github.com/rachittsethii",
-  linkedin: "https://linkedin.com/in/rachit-sethi",
+  linkedin: "https://www.linkedin.com/in/rachittsethi/",
   resumeUrl: resumeAsset.url,
   about: [
     "I'm a Computer Science undergraduate at JECRC Foundation, Jaipur, focused on machine learning, Python and core computer science fundamentals like data structures and OOP.",
