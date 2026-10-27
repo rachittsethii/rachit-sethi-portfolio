@@ -33,7 +33,7 @@ function Index() {
           <h1 className="mt-4 text-5xl font-semibold leading-tight sm:text-6xl">
             Hi, I'm <span className="text-gradient">{profile.name.split(" ")[0]}</span>.
             <br />
-            I build for the web.
+            I build AI systems.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">{profile.tagline}</p>
           <p className="mt-4 flex items-center gap-2 font-mono text-xs text-muted-foreground">
@@ -92,8 +92,8 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-5xl px-5 pb-16">
-        <p className="mono-label">Achievements</p>
-        <h2 className="mt-3 text-3xl font-semibold">Where I've worked</h2>
+        <p className="mono-label">Experience</p>
+        <h2 className="mt-3 text-3xl font-semibold">Where I've worked & led</h2>
         <div className="mt-6 space-y-4">
           {experience.map((job) => (
             <div key={job.role + job.company} className="panel p-6">
