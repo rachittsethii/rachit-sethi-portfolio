@@ -2,9 +2,9 @@ import resumeAsset from "@/assets/rachit_resume.pdf.asset.json";
 
 export const profile = {
   name: "Rachit Sethi",
-  role: "Machine Learning & Software Developer",
+  role: "AI / Machine Learning Engineer",
   tagline:
-    "Computer Science undergraduate proficient in Machine Learning, Python, C++ and Data Structures, building real-world, AI-driven software.",
+    "AI/NLP Intern at Ericsson building LLM-powered multi-agent services with LangGraph, A2A and MCP. Strong foundation in Python, C++ and OOP.",
   location: "Jaipur, India",
   email: "rachitsethi004@gmail.com",
   phone: "+91 95491 01235",
@@ -12,57 +12,91 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/rachittsethi/",
   resumeUrl: resumeAsset.url,
   about: [
-    "I'm a Computer Science undergraduate at JECRC Foundation, Jaipur, focused on machine learning, Python and core computer science fundamentals like data structures and OOP.",
-    "I like turning ideas into working software — from NLP-based resume scoring to end-to-end regression pipelines — and I'm happiest when a project moves from a notebook to something people can actually use.",
-    "Outside code, I've captained football teams at school and college level, represented at state level in football and swimming, coordinated large college fest events as a core member and served on the Student Council.",
+    "I'm a Computer Science undergraduate at JECRC Foundation, Jaipur, currently interning as an AI/NLP Engineer at Ericsson, where I build and monitor LLM-powered multi-agent services with LangGraph, A2A and MCP, plus PII masking and guardrails.",
+    "I like turning ideas into measurable systems — I built a local RAG studio whose hybrid retrieval lifted Hit Rate@8 from 66.7% to 83.3%, and an NLP-based ATS resume scorer deployed on Streamlit Cloud. Strong foundation in OOP and C++.",
+    "Outside code, I've captained football teams at school and college level, represented the state in football and swimming, served on the Student Council and coordinated large college fest events.",
   ],
 };
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Programming & Scripting", items: ["C", "C++", "Python", "Pandas", "NumPy", "Matplotlib"] },
-  { group: "Machine Learning", items: ["Supervised Learning", "Unsupervised Learning", "Scikit-learn", "Sentence Transformers"] },
-  { group: "CS Fundamentals", items: ["Data Structures", "Object-Oriented Programming", "Operating Systems"] },
-  { group: "Web & Tools", items: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "VS Code", "Google Colab", "Streamlit"] },
+  {
+    group: "Languages",
+    items: ["Python", "C++", "C", "JavaScript"],
+  },
+  {
+    group: "AI / ML / NLP",
+    items: [
+      "LLM APIs",
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "FAISS",
+      "BM25 / Hybrid Search",
+      "Ollama",
+      "Agent-to-Agent (A2A)",
+      "Model Context Protocol (MCP)",
+      "Sentence Transformers",
+      "Scikit-learn",
+      "Cosine Similarity",
+      "PII Masking / LLM Guardrails",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+    ],
+  },
+  {
+    group: "Backend & Observability",
+    items: ["REST APIs", "Postman", "Arize Phoenix", "Azure Monitor"],
+  },
+  {
+    group: "CS Fundamentals",
+    items: ["Data Structures & Algorithms", "Object-Oriented Programming", "Operating Systems"],
+  },
+  {
+    group: "Web, Tools & Cloud",
+    items: [
+      "Streamlit",
+      "Streamlit Cloud",
+      "HTML",
+      "CSS",
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Microsoft Azure",
+      "Google Colab",
+      "PyMuPDF",
+    ],
+  },
 ];
 
 export const experience = [
   {
-    role: "Copado Certified Copado AI",
-    company: "Copado",
-    period: "Jul 2026",
-    points: ["Certified in applying Copado's AI capabilities to development and release workflows."],
-  },
-  {
-    role: "Web Development Training with AI",
-    company: "Internshala",
-    period: "Aug 2024",
+    role: "AI/NLP Intern",
+    company: "Ericsson",
+    period: "Sep 2026 — Present",
     points: [
-      "Completed an 8-week training covering web development fundamentals alongside AI tooling.",
-      "Built hands-on projects using HTML, CSS and JavaScript.",
+      "Built and shipped an LLM API end-to-end for a multi-agent (LangGraph, A2A) compliance-reporting system, adding per-user request attribution via an SSO-sourced header for auditing and traceability; covered by 6 unit tests.",
+      "Building automated health, liveness and guardrail checks — agent liveness probes, round-trip response verification and MCP server health checks.",
+      "Worked on a pipeline that generates report sections in parallel using the LangGraph Send API and masks PII before every LLM call.",
+      "Ran UAT for an LLM research assistant, documenting ten test cases and flagging three issues: latency, citation formatting and unrendered links.",
     ],
   },
   {
-    role: "Participant — Smart India Hackathon 2024",
-    company: "JECRC HackQuest 7.0 (Internal Hackathon)",
-    period: "2024",
-    points: ["Worked in a team to prototype a solution under hackathon time constraints."],
-  },
-  {
-    role: "Football Team Captain & Student Council Member",
+    role: "Football Captain & State-level Athlete",
     company: "JECRC Foundation / Chinar Public School",
     period: "2020 — Present",
     points: [
-      "Captained college and school football teams in inter-college tournaments.",
-      "Secured 2nd position at the RTU Inter-College Tournament (Nov 2023).",
-      "Coordinated large-scale college fest events as a core member across cross-functional teams.",
+      "Captained school and college teams; runners-up at the RTU Inter-College Tournament (Nov 2023).",
+      "Represented the state in football and swimming.",
+      "Core member of the Student Council and the college fest organizing team.",
     ],
   },
 ];
 
 export const education = [
   {
-    school: "Jaipur Engineering College and Research Center Foundation, Jaipur",
-    degree: "B.Tech, Computer Science and Engineering — CGPA 7.54",
+    school: "Jaipur Engineering College and Research Centre (JECRC), Jaipur",
+    degree: "B.Tech, Computer Science and Engineering — CGPA 7.58",
     period: "2023 — Present",
   },
   {
@@ -79,20 +113,20 @@ export const education = [
 
 export const projects = [
   {
-    name: "AI Resume Analyzer",
-    date: "Aug 2026",
+    name: "Measured RAG Studio",
+    date: "Oct 2026",
     blurb:
-      "NLP-based ATS scoring tool that matches resumes to job descriptions using the all-MiniLM-L6-v2 transformer and cosine similarity, with PDF parsing, skill extraction and matched/missing skill analysis. Deployed on Streamlit Cloud.",
-    stack: ["Python", "Streamlit", "Sentence Transformers", "Scikit-learn", "NLP"],
+      "Local RAG system over SEBI regulatory documents using LangChain, FAISS, BM25 and bge-small-en-v1.5 embeddings, answered by a local Ollama (Llama 3.2) model via a Streamlit UI. Benchmarked dense vs hybrid (RRF) retrieval and two chunk sizes on 30 ground-truth questions — hybrid lifted Hit Rate@8 from 66.7% to 83.3% (MRR 0.42 → 0.61); 500-char chunks beat 1000-char chunks by 13 points.",
+    stack: ["Python", "LangChain", "FAISS", "BM25", "Ollama", "Streamlit"],
     link: "#",
     repo: "https://github.com/rachittsethii",
   },
   {
-    name: "Housing Price Prediction",
-    date: "Mar 2026",
+    name: "AI Resume Analyzer",
+    date: "Aug 2026",
     blurb:
-      "End-to-end machine learning app predicting housing prices, covering data cleaning, categorical encoding, feature scaling and exploratory analysis of correlations, outliers and price distributions.",
-    stack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+      "Deployed Streamlit app that scores a resume against a job description and flags missing skills. Matches on meaning rather than keywords: embeds text with all-MiniLM-L6-v2, ranks fit by cosine similarity and reads PDFs with PyMuPDF to produce an ATS score.",
+    stack: ["Python", "Streamlit", "Sentence Transformers", "PyMuPDF", "NLP"],
     link: "#",
     repo: "https://github.com/rachittsethii",
   },
@@ -130,9 +164,9 @@ export const certificates = [
     link: "https://drive.google.com/file/d/1lye71gXk1j8Ohw-OiRWbK6Gnh8qwvuj8/view?usp=drive_link",
   },
   {
-    name: "C++ Certificate",
+    name: "Learning C++",
     issuer: "LinkedIn",
-    date: "Apr 2024",
+    date: "2024",
     link: "https://drive.google.com/file/d/1ALs5rh6vnSCgv1rieoozzVdWjSsCpulA/view?usp=drive_link",
   },
 ];
