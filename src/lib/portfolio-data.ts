@@ -1,5 +1,3 @@
-import resumeAsset from "@/assets/rachit_resume.pdf.asset.json";
-
 export const profile = {
   name: "Rachit Sethi",
   role: "AI / Machine Learning Engineer",
@@ -10,7 +8,9 @@ export const profile = {
   phone: "+91 95491 01235",
   github: "https://github.com/rachittsethii",
   linkedin: "https://www.linkedin.com/in/rachittsethi/",
-  resumeUrl: resumeAsset.url,
+  // Served as a static file bundled with the site, so it downloads
+  // correctly on any host (including self-hosted Cloudflare Workers).
+  resumeUrl: "/rachit_sethi_resume.pdf",
   about: [
     "I'm a Computer Science undergraduate at JECRC Foundation, Jaipur, currently interning as an AI/NLP Engineer at Ericsson, where I build and monitor LLM-powered multi-agent services with LangGraph, A2A and MCP, plus PII masking and guardrails.",
     "I like turning ideas into measurable systems — I built a local RAG studio whose hybrid retrieval lifted Hit Rate@8 from 66.7% to 83.3%, and an NLP-based ATS resume scorer deployed on Streamlit Cloud. Strong foundation in OOP and C++.",
