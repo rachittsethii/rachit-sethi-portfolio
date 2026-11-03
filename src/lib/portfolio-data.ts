@@ -130,6 +130,24 @@ export const projects = [
     link: "#",
     repo: "https://github.com/rachittsethii",
   },
+  {
+    name: "Heart Disease Prediction",
+    date: "Sep 2026",
+    blurb:
+      "Streamlit web app that predicts the likelihood of heart disease from clinical inputs — age, blood pressure, cholesterol, ECG readings and more. Trained a logistic regression model on a heart dataset with scaled features, served via joblib artifacts in a clean form-based UI and deployed on Streamlit Cloud.",
+    stack: ["Python", "Scikit-learn", "Logistic Regression", "Streamlit", "Pandas"],
+    link: "#",
+    repo: "https://github.com/rachittsethii/heart-disease-prediction",
+  },
+  {
+    name: "Housing Price Prediction",
+    date: "Apr 2026",
+    blurb:
+      "Regression project that predicts house prices from property features using a dataset of housing records. Trained and serialized a scikit-learn model, explored the data end to end in a Jupyter notebook and wrapped the pickled model in a Streamlit app for live predictions.",
+    stack: ["Python", "Scikit-learn", "Pandas", "Streamlit", "Jupyter"],
+    link: "#",
+    repo: "https://github.com/rachittsethii/projects",
+  },
 ];
 
 export const certificates = [
